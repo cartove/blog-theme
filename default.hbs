@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        {{! Document settings and metadata }}
+        <title>{{meta_title}}</title>
+        <meta charset="utf-8" />
+        <meta name="rating" content="general"/>
+        <meta name="keywords" content="Geek, Negm,rails, meteorjs, blog,Egypt,programming,js,rails {{meta_title}}" />
+
+        {{! iOS, Android and Windows stuff }}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="format-detection" content="telephone=yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-TileImage" content="{{asset 'images/windows-tile.png'}}" />
+        <meta name="msapplication-TileColor" content="#262A2D" />
+
+        {{! Robots and Viewport }}
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        {{! OpenGraph for Facebook }}
+        <meta property="og:title" content="{{meta_title}}" />
+        <meta property="og:locale" content="en_US" />
+
+        {{! Twitter Card }}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="{{meta_title}}" />
+
+        {{! Icons }}
+        <link rel="icon" href="{{asset 'favicon.ico'}}" />
+        <link rel="icon" sizes="196x196" href="{{asset 'images/android-homescreen.png'}}" />
+        <link rel="apple-touch-icon" href="{{asset 'images/apple-touch-icon.png'}}" />
+
+        {{! Prerendering and Prefetching }}
+        {{#if @blog.cover}}
+            <link rel="prerender" href="{{@blog.cover}}" />
+            <link rel="prefetch" href="{{@blog.cover}}" />
+        {{/if}}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com/" />
+
+        {{! Scripts and Stylesheets }}
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/basics/1.2.2/basics.css" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.1/animate.min.css" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css" />
+        <link rel="stylesheet" href="{{asset 'css/phantom.css'}}" />
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+
+        {{! Page-Specific Metadata }}
+        {{{block "meta"}}}
+
+        {{ghost_head}}
+
+    </head>
+    <body class="{{body_class}}">
+        <nav class="animated fadeIn navigation">
+            <div class="container">
+                <a href="{{@blog.url}}" class="text-right sidebar brand">
+                    {{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}" />{{/if}}
+                </a>
+              <p class="content">{{@blog.title}}</p>
+              <a href="{{@blog.url}}/about" class="content content-about" rel="me">
+                About Me
+              </a>
+
+            </div>
+        </nav>
+        <div class="main">
+            {{{body}}}
+        </div>
+        <footer class="animated fadeIn" id="footer">
+            <div class="container text-center">
+              <p class="copyright"><span>Made by {{@blog.title}}.</span></p>
+              <span> <a href="//fb.com/manegm" rel="me">Facebook</a>, </span>
+              <span> <a href="//twitter.com/cartove" rel="me">twitter</a>, </span>
+              <span> <a href="//github/cartove" rel="me">Github</a>, </span>
+            </div>
+        </footer>
+
+        {{ghost_foot}}
+
+        {{! Deferred scripts }}
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.4.1/jquery.timeago.min.js"></script>
+        <script src="{{asset 'js/phantom.js'}}"></script>
+        <script>jQuery(document).ready(function() { jQuery("time.timeago").timeago(); });</script>
+
+    </body>
+</html>
