@@ -45,7 +45,7 @@
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/basics/1.2.2/basics.css" />
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.1/animate.min.css" />
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css" />
-        <link rel="stylesheet" href="{{asset 'css/phantom.css'}}" />
+      <link rel="stylesheet" href="{{asset 'css/phantom.css'}}" />
       <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
 
@@ -56,7 +56,7 @@
 
     </head>
     <body class="{{body_class}}">
-        <nav class="animated fadeIn navigation">
+        <nav class="animated fadeIn navigation" data-headroom>
             <div class="container">
                 <a href="{{@blog.url}}" class="text-right sidebar brand">
                     {{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}" />{{/if}}
@@ -88,6 +88,7 @@
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js"></script>
+        <script src="{{asset 'js/headroom.js'}}" ></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.4.1/jquery.timeago.min.js"></script>
         <script src="{{asset 'js/phantom.js'}}"></script>
