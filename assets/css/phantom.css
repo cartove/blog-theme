@@ -94,8 +94,8 @@ strong {
 
 }
 .headroom--unpinned{
-    -webkit-animation-name: fadeOutDownBig;
-    animation-name: fadeOutDownBig;
+    -webkit-animation-name: fadeOutUpBig;
+    animation-name: fadeOutUpBig;
 }
 .content, .brand {
 	display:block;
