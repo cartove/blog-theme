@@ -594,3 +594,16 @@ header .share a {
 .icon-calendar:before { content: '\e80b'; } /* '' */
 .icon-tags:before { content: '\e80c'; } /* '' */
 .icon-skype:before { content: '\e80d'; } /* '' */
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+    unicode-bidi: bidi-override;
+}
+
+.ltr {
+    direction: ltr;
+    text-align: left;
+    unicode-bidi: bidi-override;
+}
+
