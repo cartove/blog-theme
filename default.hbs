@@ -57,7 +57,7 @@
 
     </head>
     <body class="{{body_class}}">
-        <nav id="#header" class="animated fadeIn navigation">
+        <nav data-headroom class="animated fadeIn navigation">
             <div class="container">
                 <a href="{{@blog.url}}" class="text-right sidebar brand">
                     {{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}" />{{/if}}
@@ -95,8 +95,6 @@
         <script src="{{asset 'js/headroom.js'}}" ></script>
         <script>jQuery(document).ready(function() {
           $("time.timeago").timeago();
-          $("#header").headroom();
-
         });</script>
 
     </body>
