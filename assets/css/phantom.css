@@ -19,7 +19,7 @@ p, ul, ol {
 	font-weight:300;
 	line-height:34px;
 	letter-spacing:0;
-	color:#7f8c8d;
+	color:#666;
 }
 ul ul, ol ul, ul ol, ol ol {
 	margin-bottom:0;
@@ -30,7 +30,7 @@ blockquote {
 	border-left:1px dotted #ddd;
 }
 a {
-	color:#7f8c8d;
+	color:#666;
 	text-decoration:none;
 	border-bottom:1px dotted #ddd;
 	-webkit-transition: color .2s ease-in-out;
@@ -49,7 +49,7 @@ strong {
 }
 .container, .pagination {
 	position:relative;
-	width:500px;
+	width:700px;
 	margin:0 auto;
 }
 .pagination {
@@ -57,7 +57,7 @@ strong {
 	font-size: 13px;
 }
 .page-number {
-	color: #7f8c8d;
+	color: #666;
 }
 .older-posts {
 	position: absolute;
@@ -162,7 +162,7 @@ header .container {
 header .share {
 	margin-top:20px;
 	line-height:28px;
-	color:#7f8c8d;
+	color:#666;
 }
 .meta {
 	top:140px;
@@ -174,7 +174,7 @@ header .share {
 }
 .meta time, .tags a {
 	font-weight:300;
-	color:#7f8c8d;
+	color:#666;
 }
 .meta strong, .tags a, .meta time {
 	font-size:13px;
@@ -199,7 +199,7 @@ header .share {
 }
 .meta .separator {
 	display:none;
-	color:#7f8c8d;
+	color:#666;
 	margin:0 10px;
 }
 .push-article {
