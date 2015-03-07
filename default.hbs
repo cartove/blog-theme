@@ -57,7 +57,7 @@
 
     </head>
     <body class="{{body_class}}">
-        <nav class="animated fadeIn navigation" data-headroom>
+        <nav id="#header" class="animated fadeIn navigation">
             <div class="container">
                 <a href="{{@blog.url}}" class="text-right sidebar brand">
                     {{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}" />{{/if}}
@@ -89,11 +89,15 @@
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js"></script>
-        <script src="{{asset 'js/headroom.js'}}" ></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.4.1/jquery.timeago.min.js"></script>
         <script src="{{asset 'js/phantom.js'}}"></script>
-        <script>jQuery(document).ready(function() { jQuery("time.timeago").timeago(); });</script>
+        <script src="{{asset 'js/headroom.js'}}" ></script>
+        <script>jQuery(document).ready(function() {
+          $("time.timeago").timeago();
+          $("#header").headroom();
+
+        });</script>
 
     </body>
 </html>
