@@ -543,6 +543,9 @@ header .share a {
 		max-width: 270px;
 		margin: 10px 0 0 0;
 	}
+    .blog-name{
+        font-size: 12px;
+    }
 }
 @media print {
 	header .share {
