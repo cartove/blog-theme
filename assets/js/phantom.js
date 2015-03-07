@@ -1,10 +1,8 @@
 /*jslint browser:true, unparam:true*/
 /*global $, FastClick, hljs*/
-
 $(function () {
 
     'use strict';
-
     // Execute FastClick.js
     FastClick.attach(document.body);
 
@@ -47,5 +45,6 @@ $(function () {
         window.open(this.href, 'google-plus-share', 'width=490,height=530');
         return false;
     });
+
 
 });

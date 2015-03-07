@@ -113,6 +113,14 @@ strong {
 	background:#fff;
 	-webkit-animation-duration:1s;
 	animation-duration:1s;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    display: block;
+
+}
+.headroom--unpinned{
+    transform: translateY(-100%);
 }
 .content, .brand {
 	display:block;
