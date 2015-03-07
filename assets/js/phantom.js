@@ -55,7 +55,7 @@ $(function () {
 
     for ( var index = 0; index < divs.length; index++ ) {
         if( checkRtl( divs[index].textContent[0] ) ) {
-            divs[index].addClass('rtl');
+            $(divs[index]).addClass('rtl');
             }
     }
 
