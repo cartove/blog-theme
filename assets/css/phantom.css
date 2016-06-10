@@ -600,12 +600,12 @@ header .share a {
 .rtl {
     direction: rtl;
     text-align: right;
-    unicode-bidi: bidi-override;
+    unicode-bidi: embed;
 }
 
 .ltr {
     direction: ltr;
     text-align: left;
-    unicode-bidi: bidi-override;
+    unicode-bidi: embed;
 }
 
